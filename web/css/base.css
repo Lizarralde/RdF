@@ -1,0 +1,300 @@
+body header .list {
+  background-color: white;
+  border: 1px solid lightgray;
+  overflow: hidden;
+  width: 300px;
+  float: left;
+}
+body header .list .listHeader {
+  line-height: 14px;
+  height: 18px;
+}
+body header .list .listHeader .listHeaderText {
+  width: 270px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  height: 13px;
+}
+body header .list .listHeader .glyphicon {
+  float: right;
+  right: 4px;
+  top: 2px;
+  cursor: pointer;
+}
+body header .list .listItems {
+  line-height: 14px;
+  max-height: 60px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 299px;
+  display: none;
+  z-index: 1;
+}
+body header .list .listItems .listItem {
+  display: block;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  width: 275px;
+  color: black;
+}
+body header .list .listItems .listItem:hover {
+  text-decoration: none;
+  background-color: lightgray;
+}
+body header #tags {
+  width: 500px;
+}
+body header #tags .tag {
+  float: left;
+}
+body header #tags .tag .tagText {
+  width: 200px;
+}
+body header #tags .tag .cross {
+  float: right;
+  right: 4px;
+  top: 2px;
+  cursor: pointer;
+}
+body .kpiWrapper {
+  background-color: #FFF;
+  border: 1px solid #E5E5E5;
+  height: 330px;
+  position: relative;
+  margin-bottom: 13px;
+  float: left;
+  margin-left: 15px;
+}
+body .kpiWrapper.square {
+  height: 380px;
+}
+body .kpiWrapper.medium {
+  width: 350px;
+}
+body .kpiWrapper.large {
+  width: 600px;
+}
+body .kpiWrapper .kpiHeader {
+  height: 38px;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 0 6px;
+  font-size: 24px;
+}
+body .kpiWrapper .kpiHeader.noBorder {
+  border-bottom: none;
+}
+body .kpiWrapper .kpiHeader .kpiIcon {
+  display: inline-block;
+  height: 28px;
+  margin-right: 7px;
+  position: absolute;
+  top: 5px;
+  width: 28px;
+}
+body .kpiWrapper .kpiContent {
+  padding: 18px;
+  padding: 10px;
+}
+body .kpiWrapper .kpiContent .column {
+  border-right: 1px solid #E5E5E5;
+  float: left;
+  height: 250px;
+  position: relative;
+}
+body .kpiWrapper .kpiContent .column.p1 {
+  cursor: pointer;
+  width: 20%;
+}
+body .kpiWrapper .kpiContent .column.p1 .userName {
+  bottom: 178px;
+}
+body .kpiWrapper .kpiContent .column.p2 {
+  cursor: pointer;
+  width: 18%;
+}
+body .kpiWrapper .kpiContent .column.p2 .userName {
+  bottom: 158px;
+}
+body .kpiWrapper .kpiContent .column.p3 {
+  cursor: pointer;
+  width: 14%;
+}
+body .kpiWrapper .kpiContent .column.p3 .userName {
+  bottom: 124px;
+}
+body .kpiWrapper .kpiContent .column.p4 {
+  cursor: pointer;
+  width: 12%;
+}
+body .kpiWrapper .kpiContent .column.p4 .userName {
+  bottom: 105px;
+}
+body .kpiWrapper .kpiContent .column.p5 {
+  cursor: pointer;
+  width: 10%;
+}
+body .kpiWrapper .kpiContent .column.p5 .userName {
+  display: none;
+}
+body .kpiWrapper .kpiContent .column.p6 {
+  cursor: pointer;
+  width: 8%;
+}
+body .kpiWrapper .kpiContent .column.p6 .userName {
+  display: none;
+}
+body .kpiWrapper .kpiContent .column.p7 {
+  cursor: pointer;
+  width: 6%;
+}
+body .kpiWrapper .kpiContent .column.p7 .userName {
+  display: none;
+}
+body .kpiWrapper .kpiContent .column.p8 {
+  cursor: pointer;
+  width: 5%;
+}
+body .kpiWrapper .kpiContent .column.p8 .userName {
+  display: none;
+}
+body .kpiWrapper .kpiContent .column.p9 {
+  cursor: pointer;
+  width: 4%;
+}
+body .kpiWrapper .kpiContent .column.p9 .userName {
+  display: none;
+}
+body .kpiWrapper .kpiContent .column.p10 {
+  cursor: pointer;
+  width: 3%;
+}
+body .kpiWrapper .kpiContent .column.p10 .userName {
+  display: none;
+}
+body .kpiWrapper .kpiContent .column:nth-of-type(10) {
+  border-right: none;
+}
+body .kpiWrapper .kpiContent .column .trendArrow {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  right: 2px;
+  margin-left: 10px;
+  background-image: url();
+  background-repeat: no-repeat;
+}
+body .kpiWrapper .kpiContent .column .trendArrow.up {
+  background-position: -322px -70px;
+}
+body .kpiWrapper .kpiContent .column .trendArrow.down {
+  background-position: -350px -70px;
+}
+body .kpiWrapper .kpiContent .column .trendArrow.equal {
+  background-position: -378px -70px;
+}
+body .kpiWrapper .kpiContent .column .userAvatar {
+  width: 100%;
+  padding: 2px;
+  position: absolute;
+  bottom: 0;
+}
+body .kpiWrapper .kpiContent .column .userName {
+  position: absolute;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: ;
+  padding: 0 10px;
+  overflow: hidden;
+  display: table;
+}
+body .kpiWrapper .kpiContent .column .userName span {
+  display: table-cell;
+  vertical-align: bottom;
+}
+body .kpiWrapper .kpiContent .column .position {
+  position: absolute;
+  bottom: -18px;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: ;
+}
+body .kpiWrapper .kpiContent .theNumberWrapper {
+  margin-top: 15px;
+}
+body .kpiWrapper .kpiContent .theNumberWrapper .theNumber {
+  font-size: 70px;
+  line-height: 70px;
+  color: darkgray;
+  text-align: center;
+}
+body .kpiWrapper .kpiContent .theNumberWrapper .theChapo {
+  font-size: 11px;
+  color: gray;
+  text-align: center;
+}
+body .kpiWrapper .kpiContent .theNumberWrapper .theChapo .greenSquare {
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: 10px;
+}
+body .kpiWrapper .kpiContent .theTextWrapper {
+  margin-top: 15px;
+}
+body .kpiWrapper .kpiContent .theTextWrapper .theText {
+  font-size: 43px;
+  line-height: 48px;
+  color: darkgray;
+  text-align: center;
+}
+body .kpiWrapper .kpiContent .theTextWrapper .theChapo {
+  font-size: 11px;
+  color: gray;
+  text-align: left;
+}
+body .kpiWrapper .kpiContent .theTextWrapper .theChapo .text {
+  font-size: 15px;
+}
+body .kpiWrapper .kpiContent .theTextWrapper .theChapo .greenSquare {
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: 10px;
+  background-color: blue;
+}
+body .kpiWrapper .kpiContent .trendWrapper {
+  margin-top: 86px;
+}
+body .kpiWrapper .kpiContent .trendWrapper .trendTitle {
+  font-size: 15px;
+  color: darkgray;
+  text-align: right;
+}
+body .kpiWrapper .kpiContent .trendWrapper .trendDesc {
+  color: lightgray;
+  font-size: 11px;
+  text-align: right;
+}
+body .kpiWrapper .kpiFooter {
+  height: 38px;
+  border-top: 1px solid #E5E5E5;
+  padding: 0 12px;
+  line-height: 38px;
+  color: lightgray;
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  width: 100%;
+}

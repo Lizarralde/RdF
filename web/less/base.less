@@ -1,0 +1,423 @@
+
+body {
+
+    header {
+        .list {
+            background-color: white;
+            border: 1px solid lightgray;
+            overflow: hidden;
+            width: 300px;
+            float:left;
+
+            .listHeader {
+                line-height: 14px;
+                height: 18px;
+
+                .listHeaderText {
+                    width: 270px;
+                    overflow: hidden;
+                    display: block;
+                    float: left;
+                    height: 13px;
+                }
+
+                .glyphicon {
+                    float: right;
+                    right: 4px;
+                    top: 2px;
+                    cursor: pointer;
+                }
+            }
+
+            .listItems {
+                line-height: 14px;
+                max-height: 60px;
+                overflow-y: scroll;
+                position: absolute;
+                width: 299px;
+                display: none;
+                z-index: 1;
+
+                .listItem {
+                    display: block;
+                    float: left;
+                    height: 20px;
+                    line-height: 20px;
+                    overflow: hidden;
+                    width: 275px;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: lightgray;
+                    }
+                }
+            }
+        }
+        
+        #tags {
+                width:500px;
+
+                .tag {
+                    float:left;
+                    .tagText{
+                        width:200px;
+                    }
+                    .cross {
+                        float:right;
+                        right:4px;
+                        top:2px;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+    }
+
+    .kpiWrapper {
+        background-color: #FFF;
+        border: 1px solid #E5E5E5;
+        height: 330px;
+        position: relative;
+        margin-bottom: 13px;
+        float: left;
+        margin-left: 15px;
+
+        &.square {
+            height: 380px;
+        }
+        &.medium {
+            width: 350px;
+        }
+
+        &.large {
+            width: 600px;
+        }
+
+        .kpiHeader {
+            height: 38px;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 0 6px;
+            font-size: 24px;
+            &.noBorder {
+                border-bottom: none;
+            }
+
+            .kpiIcon {
+                display: inline-block;
+                height: 28px;
+                margin-right: 7px;
+                position: absolute;
+                top: 5px;
+                width: 28px;
+            }
+        }
+
+        .kpiContent {
+            padding: 18px;
+            padding: 10px;
+
+            .column {
+                border-right: 1px solid #E5E5E5;
+                float: left;
+                height: 250px;
+                position: relative;
+
+                &.p1 {
+                    cursor: pointer;
+                    width: 20%;
+                    .userName {
+                        bottom: 178px;
+                    }
+                }
+                &.p2 {
+                    cursor: pointer;
+                    width: 18%;
+                    .userName {
+                        bottom: 158px;
+                    }
+                }
+                &.p3 {
+                    cursor: pointer;
+                    width: 14%;
+                    .userName {
+                        bottom: 124px;
+                    }
+                }
+                &.p4 {
+                    cursor: pointer;
+                    width: 12%;
+                    .userName {
+                        bottom: 105px;
+                    }
+                }
+                &.p5 {
+                    cursor: pointer;
+                    width: 10%;
+                    .userName {
+                        display: none;
+                    }
+                }
+                &.p6 {
+                    cursor: pointer;
+                    width: 8%;
+                    .userName {
+                        display: none;
+                    }
+                }
+                &.p7 {
+                    cursor: pointer;
+                    width: 6%;
+                    .userName {
+                        display: none;
+                    }
+                }
+                &.p8 {
+                    cursor: pointer;
+                    width: 5%;
+                    .userName {
+                        display: none;
+                    }
+                }
+                &.p9 {
+                    cursor: pointer;
+                    width: 4%;
+                    .userName {
+                        display: none;
+                    }
+                }
+                &.p10 {
+                    cursor: pointer;
+                    width: 3%;
+                    .userName {
+                        display: none;
+                    }
+                }
+
+                &:nth-of-type(10) {
+                    border-right: none;
+                }
+
+                .trendArrow {
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    top: 0;
+                    right: 2px;
+                    margin-left: 10px;
+                    background-image: url(@hoozinBlackSprite);
+                    background-repeat: no-repeat;
+
+                    &.up {
+                        background-position: -322px -70px;
+                    }
+
+                    &.down {
+                        background-position: -350px -70px;
+                    }
+
+                    &.equal {
+                        background-position: -378px -70px;
+                    }
+                }
+
+                .userAvatar {
+                    width: 100%;
+                    padding: 2px;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+                .userName {
+                    position: absolute;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    font-size: 11px;
+                    color: @hoozinDarkGray;
+                    padding: 0 10px;
+                    overflow: hidden;
+                    display: table;
+                    .wrap();
+
+                    span {
+                        display: table-cell;
+                        vertical-align: bottom;
+                    }
+                }
+
+                .position {
+                    position: absolute;
+                    bottom: -18px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: @hoozinGrayLight;
+                }
+            }
+
+            .theNumberWrapper {
+                margin-top: 15px;
+
+                .theNumber {
+                    font-size: 70px;
+                    line-height: 70px;
+                    color: darkgray;
+                    text-align: center;
+                }
+
+                .theChapo {
+                    font-size: 11px;
+                    color: gray;
+                    text-align: center;
+
+                    .greenSquare {
+                        display: inline-block;
+                        height: 10px;
+                        margin-right: 5px;
+                        position: relative;
+                        top: 2px;
+                        width: 10px;
+                    }
+                }
+            }
+
+            .theTextWrapper {
+                margin-top: 15px;
+
+                .theText {
+                    font-size: 43px;
+                    line-height: 48px;
+                    color: darkgray;
+                    text-align: center;
+                }
+
+                .theChapo {
+                    font-size: 11px;
+                    color: gray;
+                    text-align: left;
+                    /*.icon {
+					    background-image: url("/_layouts/images/Prexens/Hoozin/sprites/bl-hoozin-sprite.png?14010800");
+					    background-position: -56px -126px;
+					    display:inline-block;
+					    height: 25px;
+					    width: 25px;
+					    margin-right:10px;
+					    float:left;
+				    }*/
+                    .text {
+                        font-size: 15px;
+                    }
+
+                    .greenSquare {
+                        display: inline-block;
+                        height: 10px;
+                        margin-right: 5px;
+                        position: relative;
+                        top: 2px;
+                        width: 10px;
+                        background-color: blue;
+                    }
+                }
+            }
+            /*
+		    <div class="trendWrapper">
+			    <div class="trendArrow"></div>
+			    <div class="trendTitle"></div>
+			    <div class="trendDesc"></div>
+		    </div>
+		    */
+            .trendWrapper {
+                margin-top: 86px;
+
+
+                .trendTitle {
+                    font-size: 15px;
+                    color: darkgray;
+                    text-align: right;
+                }
+
+                .trendDesc {
+                    color: lightgray;
+                    font-size: 11px;
+                    text-align: right;
+                }
+            }
+        }
+
+        .kpiFooter {
+            height: 38px;
+            border-top: 1px solid #E5E5E5;
+            padding: 0 12px;
+            line-height: 38px;
+            color: lightgray;
+            position: absolute;
+            bottom: 0;
+            text-align: right;
+            width: 100%;
+        }
+    }
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

@@ -1,0 +1,15 @@
+diff a/Node_js_server/OpenData/OpenData/js/events.js b/Node_js_server/OpenData/OpenData/js/events.js	(rejected hunks)
+@@ -32,9 +32,11 @@
+         var facets = $this.attr('data-facets');
+         var codeFormatterName = $this.attr('data-joinner-formatter');
+         var joinner = $this.attr('data-joinner');
+-        var valueKey = $this.attr('data-value-key');
+-
++        var valueKey = $this.attr('data-value-key')
+         
++        var groupBy = $this.attr('data-group-by');
++        var text = $this.text();
++
+         //var url = oDataManager.queryBuilder(dataset, q, rows, facets);
+         var url = dataset + '.json';
+         console.log(url);

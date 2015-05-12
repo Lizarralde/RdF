@@ -1,0 +1,48 @@
+var highchartsUtils = function () {
+
+    this.createMonoSerieChart = function(containerId, data, serieName)
+    {
+<<<<<<< HEAD
+        $('#'+containerId).highcharts({
+            
+=======
+        $('#' + containerId).highcharts({
+            chart: {
+                height: 250,
+                marginTop: 0,
+                marginBottom:0,
+            },
+            title:'',
+>>>>>>> 49b0520ecd607b443cd21812ccddd6c104ce2658
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+<<<<<<< HEAD
+                        enabled: true,
+=======
+                        enabled: false,
+>>>>>>> 49b0520ecd607b443cd21812ccddd6c104ce2658
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                    type: 'pie',
+<<<<<<< HEAD
+                    name: 'serie',
+=======
+                    name: serieName,
+>>>>>>> 49b0520ecd607b443cd21812ccddd6c104ce2658
+                    data: data
+                }]
+        });
+    };
+};

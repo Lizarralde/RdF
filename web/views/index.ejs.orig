@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<<<<<<< HEAD
+<head>
+    <title>my Paris map</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="highcharts/highcharts.src.js"></script>
+    <script type="text/javascript" src="highcharts/highcharts-more.src.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/maps/modules/data.js"></script>
+    <script type="text/javascript" src="less.js-2.0.0-b2/dist/less.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dataUtils/dataManager.js"></script>
+    <script type="text/javascript" src="mapUtils/mapsTemplate.js"></script>
+    <script type="text/javascript" src="highchartsUtils/highchartsUtils.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.0/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+
+    <script type="text/javascript">
+        var myMap = new mapsTemplate();
+        var oDataManager = new dataManager();
+        var chartUtils = new highchartsUtils();
+        $(function () {
+
+
+            $.getJSON("communes.geojson", function (geojson) {
+                myMap.createMap(geojson, myMap.getDefaultData(), 'code', 800, 400, "my title", "my serie", function (e) { console.log(e); });
+            });
+        });
+    </script>
+    <script src="events.js"></script>
+</head>
+<body>
+=======
+    <head id="idHeader">
+        <title>Remarquable</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="highcharts/highcharts.src.js"></script>
+        <script type="text/javascript" src="highcharts/highcharts-more.src.js"></script>
+        <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+        <script type="text/javascript" src="http://code.highcharts.com/maps/modules/data.js"></script>
+        <script type="text/javascript" src="less.js-2.0.0-b2/dist/less.min.js"></script>
+        <script type="text/javascript" src="bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="dataUtils/dataManager.js"></script>
+        <script type="text/javascript" src="mapUtils/mapsTemplate.js"></script>
+        <script type="text/javascript" src="highchartsUtils/highchartsUtils.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.0/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="base.css">
+		 
+    </script>
+	<div id="Map">
+        <script type="text/javascript">
+            var myMap = new mapsTemplate();
+            var oDataManager = new dataManager();
+            var chartUtils = new highchartsUtils();
+            $(function () {
+                
+
+                $.getJSON("communes.geojson", function (geojson) {
+                    myMap.createMap(geojson, myMap.getDefaultData(), 'code', 800, 400, "Paris", "my serie", function(e) {console.log(e);});
+                });
+            });
+        </script>
+        <script src="events.js"></script>
+		</div>
+    </head>
+    <body>
+		<h2>Endroits Remarquables</h2>
+        <div id="container" ></div>
+        <header>
+            <div class="list">
+			<style type="text/css">
+				
+			
+			
+			</style>
+                <div class="listHeader">
+                    <span class="listHeaderText" data-dataset=""></span>
+                    <span class="arrow-down glyphicon glyphicon-chevron-down"></span>
+                </div>
+                <div class="listItems">
+                    <a href="#" class="listItem"
+                       data-dataset="distributeurspreservatifsmasculinsparis2012"
+                       data-q=""
+                       data-rows="10000"
+                       data-facets=""
+                       data-joinner="arrond"
+                       data-joinner-formatter="codeReducer"
+                       data-value-key=""
+                       data-group-by="arrond"
+                       data-chart-type="pie"
+                       data-serie-name="Distributeur de préservatif">Distributeur de préservatifs</a>
+                    <a href="#" class="listItem"
+                       data-dataset="consultations_des_centres_de_sante"
+                       data-q=""
+                       data-rows="10000"
+                       data-facets=""
+                       data-joinner="adresse_code_postal"
+                       data-joinner-formatter="codeReducer"
+                       data-value-key=""
+                       data-group-by="adresse_code_postal;specialite"
+                       data-chart-type="pie;column"
+                       data-serie-name="Consultation par arrondissement;consultation par spécialité">Centre de santé</a>
+                </div>
+>>>>>>> 3a330db595864654df851f3911fcf5dbcb8ffbcb
+
+    <div id="container"></div>
+    <header>
+        <div class="list">
+            <div class="listHeader">
+                <span class="listHeaderText" data-dataset=""></span>
+                <span class="arrow-down glyphicon glyphicon-chevron-down"></span>
+            </div>
+            <div class="listItems">
+                <a href="#" class="listItem"
+                   data-dataset="distributeurspreservatifsmasculinsparis2012"
+                   data-q=""
+                   data-rows="10000"
+                   data-facets=""
+                   data-joinner="arrond"
+                   data-joinner-formatter="codeReducer"
+                   data-value-key=""
+                   data-group-by="arrond"
+                   data-chart-type="pie"
+                   data-serie-name="Distributeur de préservatif">Distributeur de préservatifs</a>
+                <a href="#" class="listItem"
+                   data-dataset="consultations_des_centres_de_sante"
+                   data-q=""
+                   data-rows="10000"
+                   data-facets=""
+                   data-joinner="adresse_code_postal"
+                   data-joinner-formatter="codeReducer"
+                   data-value-key=""
+                   data-group-by="adresse_code_postal;specialite"
+                   data-chart-type="pie;column"
+                   data-serie-name="Consultation par arrondissement;consultation par spécialité">Centre de santé</a>
+            </div>
+
+        </div>
+        <div id="tags">
+            <div class="tag" id="tagClone" data-dataset="" style="display:none">
+                <span class="tagText"></span>
+                <span class="cross glyphicon glyphicon-chevron-down"></span>
+            </div>
+        </div>
+        <div class="boutton">
+            <button onclick="ClicBouton();">Afficher carte detaillée</button>
+
+<<<<<<< HEAD
+            <script type="text/javascript">
+                function ClicBouton() {
+                    if ($('.listHeaderText').attr('data-dataset') == "distributeurspreservatifsmasculinsparis2012") {
+                        $('#myiframeCentreMedic').css("display", "none");
+                        $('#myiframeDistributeur').css("display", "block");
+                    }
+                    if ($('.listHeaderText').attr('data-dataset') == "consultations_des_centres_de_sante") {
+                        $('#myiframeDistributeur').css("display", "none");
+                        $('#myiframeCentreMedic').css("display", "block");
+                    }
+                }
+            </script>
+=======
+				</div>
+        </header>
+
+
+        <div id="container" >
+		  <style type="text/css">
+		  #container{
+			    margin: auto;
+				width: 800px;
+		  }
+  </style>
+		</div>
+        <div id="kpiHomeWrapper">
+            <div class="kpiWrapper " id="kpiCopy" style="display:none">
+                <div class="kpiHeader">
+                    <span class="kpiIcon"></span>
+
+>>>>>>> 3a330db595864654df851f3911fcf5dbcb8ffbcb
+
+        </div>
+<<<<<<< HEAD
+    </header>
+    <iframe id="myiframeDistributeur" style="display:none; width: 1020px; height: 320px" src="http://opendata.paris.fr/explore/embed/dataset/distributeurspreservatifsmasculinsparis2012/?tab=map&location=12,48.85862,2.47999&static=false&datasetcard=false" width="400" height="300" frameborder="0"></iframe>
+    <iframe id="myiframeCentreMedic" style="display:none; width: 1020px; height: 320px" src="http://opendata.paris.fr/explore/embed/dataset/consultations_des_centres_de_sante/?tab=map&refine.nom_de_lactivite=Soins&location=12,48.83128,2.39862&static=false&datasetcard=false" width="400" height="300" frameborder="0"></iframe>
+
+    <div id="kpiHomeWrapper">
+        <div class="kpiWrapper " id="kpiCopy" style="display:none">
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    My title
+                </h2>
+
+            </div>
+            <div id="container1" class="kpiContent highchartsWrapper"></div>
+            <div class="kpiFooter">
+                <span></span>
+=======
+                    <span class="kpiIcon"></span>
+                </div>
+                <div id="container1" class="kpiContent highchartsWrapper"></div>
+                <div class="kpiFooter">
+                    <span></span>
+                </div>
+>>>>>>> 3a330db595864654df851f3911fcf5dbcb8ffbcb
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

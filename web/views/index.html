@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head id="idHeader">
+    <title>Remarquable</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/highcharts/highcharts.src.js"></script>
+    <script type="text/javascript" src="../js/highcharts/highcharts-more.src.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/maps/modules/data.js"></script>
+    <script type="text/javascript" src="../dependences/less.js-2.0.0-b2/dist/less.min.js"></script>
+    <script type="text/javascript" src="../dependences/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/servicesUtils/servicesUtils.js"></script>
+    <script type="text/javascript" src="../js/highchartsUtils/highchartsUtils.js"></script>
+    <link rel="stylesheet" type="text/css" href="../dependences/bootstrap-3.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../dependences/bootstrap-3.3.0/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+
+        <script type="text/javascript">
+            var services = new servicesUtils()
+            var chartUtils = new highchartsUtils();
+            $(function () {
+                chartUtils.generateKPI();
+
+            });
+        </script>
+        <script src="events.js"></script>
+</head>
+<body>
+    <h2 style="margin-left: 30px;
+        font-size: 50px;
+        color: darkgray;
+        line-height: 38px;
+        margin: 0 0 0 35px;
+        padding: 0;
+        text-align: center;">Endroits Remarquables</h2>
+    <div id="container"></div>
+    <header>
+        <!--<<div class="list">
+            <style type="text/css">
+
+
+
+            </style>
+            div class="listHeader">
+                <span class="listHeaderText" data-dataset=""></span>
+                <span class="arrow-down glyphicon glyphicon-chevron-down"></span>
+            </div>
+            <div class="listItems">
+                <a href="#" class="listItem"
+                   data-dataset="distributeurspreservatifsmasculinsparis2012"
+                   data-q=""
+                   data-rows="10000"
+                   data-facets=""
+                   data-joinner="arrond"
+                   data-joinner-formatter="codeReducer"
+                   data-value-key=""
+                   data-group-by="arrond"
+                   data-chart-type="pie"
+                   data-serie-name="Distributeur de pr�servatif">Distributeur de pr�servatifs</a>
+                <a href="#" class="listItem"
+                   data-dataset="consultations_des_centres_de_sante"
+                   data-q=""
+                   data-rows="10000"
+                   data-facets=""
+                   data-joinner="adresse_code_postal"
+                   data-joinner-formatter="codeReducer"
+                   data-value-key=""
+                   data-group-by="adresse_code_postal;specialite"
+                   data-chart-type="pie;column"
+                   data-serie-name="Consultation par arrondissement;consultation par sp�cialit�">Centre de sant�</a>
+            </div>
+
+        </div>
+        <div id="tags">
+            <div class="tag" id="tagClone" data-dataset="" style="display:none">
+                <span class="tagText"></span>
+                <span class="cross glyphicon glyphicon-remove"></span>
+            </div>
+        </div>
+
+
+
+        </div>-->
+    </header>
+
+
+    <div id="kpiHomeWrapper">
+        <div class="kpiWrapper " id="kpiCopy" style="display:none">
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    My title
+                </h2>
+
+            </div>
+            <div id="container1" class="kpiContent highchartsWrapper"></div>
+            <div class="kpiFooter">
+                <span></span>
+            </div>
+        </div>
+
+        <div class="kpiWrapper square" id="topRunner" data-reuest="topRunner" data-type="square" data-begin="1" data-max="1000" data-top="10">
+
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    Top des coureurs.
+                </h2>
+            </div>
+
+
+            <div class="kpiContent">
+
+
+                <div class="p0 column showMiniProfile"
+                     data-href="{$miniprofile-url}" style="display: none">
+                    <div class="userName">
+								<span>
+
+								</span>
+                    </div>
+                    <img class="userAvatar hoozinTooltip" data-tooltip-delay="0" title="" src="{$avatar-url}" alt="" />
+                    <div class="position">
+                        <!--$begin + $square-position -1-->
+                    </div>
+                </div>
+                <div style="float: none;clear: left;"></div>
+            </div>
+
+            <div class="kpiFooter">
+                <span class="previous" data-request="topRunner"></span>
+                <span class="next" data-request="topRunner"></span>
+            </div>
+
+        </div>
+
+        <div style="float: none;clear: left;"></div>
+
+        <div class="kpiWrapper linkedChart" id="antenneRepartitionPie" data-linked-chart="antenneRepartitionLine" data-seriename="Participants" style="">
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    Participants par antenne.
+                </h2>
+
+            </div>
+            <div id="antenneRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+            <div class="kpiFooter">
+                <span></span>
+            </div>
+        </div>
+        <div class="kpiWrapper medium" id="antenneRepartitionLine" data-request="antenneRepartition" data-type="line" style="">
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    Temps des participants par antenne.
+                </h2>
+
+            </div>
+            <div id="antenneRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+            <div class="kpiFooter">
+                <span></span>
+            </div>
+        </div>
+
+        <div style="float: none;clear: left;"></div>
+
+        <div class="kpiWrapper linkedChart" id="degreeRepartitionPie" data-request="degreeRepartition" data-seriename="Participants" style="">
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    Participants par année.
+                </h2>
+
+            </div>
+            <div id="degreeRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+            <div class="kpiFooter">
+                <span></span>
+            </div>
+        </div>
+        <div class="kpiWrapper medium" id="degreeRepartitionLine" data-request="degreeRepartition" data-type="line" style="">
+            <div class="kpiHeader">
+                <span class="kpiIcon"></span>
+                <h2>
+                    Temps des participants par antenne.
+                </h2>
+
+            </div>
+            <div id="degreeRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+            <div class="kpiFooter">
+                <span></span>
+            </div>
+        </div>
+
+        <div style="float: none;clear: left;"></div>
+
+    </div>
+</body>
+</html>

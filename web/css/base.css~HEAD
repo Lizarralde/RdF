@@ -1,0 +1,231 @@
+body #mainDiv {
+  width: 1024px;
+  margin: auto;
+}
+body #mainDiv header .list {
+  background-color: white;
+  border: 1px solid lightgray;
+  overflow: hidden;
+  width: 300px;
+}
+body #mainDiv header .list .listHeader {
+  line-height: 14px;
+  height: 18px;
+}
+body #mainDiv header .list .listHeader .listHeaderText {
+  width: 370px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  height: 13px;
+}
+body #mainDiv header .list .listHeader .glyphicon {
+  float: right;
+  right: 4px;
+  top: 2px;
+  cursor: pointer;
+}
+body #mainDiv header .list .listItems {
+  line-height: 14px;
+  max-height: 60px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 299px;
+  display: none;
+  z-index: 1;
+}
+body #mainDiv header .list .listItems .listItem {
+  display: block;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  width: 175px;
+  color: black;
+}
+body #mainDiv header .list .listItems .listItem:hover {
+  text-decoration: none;
+  background-color: lightgray;
+}
+body #mainDiv header #tags {
+  width: 500px;
+}
+body #mainDiv header #tags .tag {
+  float: left;
+}
+body #mainDiv header #tags .tag .tagText {
+  width: 200px;
+}
+body #mainDiv header #tags .tag .cross {
+  float: right;
+  right: 4px;
+  top: 2px;
+  cursor: pointer;
+}
+body #mainDiv .kpiWrapper {
+  background-color: #FFF;
+  border: 1px solid #E5E5E5;
+  height: 330px;
+  position: relative;
+  margin-bottom: 13px;
+  float: left;
+  margin-left: 15px;
+}
+body #mainDiv .kpiWrapper.medium {
+  width: 350px;
+}
+body #mainDiv .kpiWrapper.large {
+  width: 600px;
+}
+body #mainDiv .kpiWrapper .kpiHeader {
+  height: 38px;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 0 6px;
+}
+body #mainDiv .kpiWrapper .kpiHeader.noBorder {
+  border-bottom: none;
+}
+body #mainDiv .kpiWrapper .kpiHeader .kpiIcon {
+  display: inline-block;
+  height: 28px;
+  margin-right: 7px;
+  position: absolute;
+  top: 5px;
+  width: 28px;
+}
+body #mainDiv .kpiWrapper .kpiHeader h2 {
+  margin-left: 30px;
+  font-size: 11px;
+  color: darkgray;
+  line-height: 38px;
+  margin: 0 0 0 35px;
+  padding: 0;
+}
+body #mainDiv .kpiWrapper .kpiContent {
+  padding: 18px;
+  padding: 10px;
+  /*
+		        <div class="trendWrapper">
+			        <div class="trendArrow"></div>
+			        <div class="trendTitle"></div>
+			        <div class="trendDesc"></div>
+		        </div>
+		        */
+}
+body #mainDiv .kpiWrapper .kpiContent .theNumberWrapper {
+  margin-top: 15px;
+}
+body #mainDiv .kpiWrapper .kpiContent .theNumberWrapper .theNumber {
+  font-size: 70px;
+  line-height: 70px;
+  color: darkgray;
+  text-align: center;
+}
+body #mainDiv .kpiWrapper .kpiContent .theNumberWrapper .theChapo {
+  font-size: 11px;
+  color: gray;
+  text-align: center;
+}
+body #mainDiv .kpiWrapper .kpiContent .theNumberWrapper .theChapo .greenSquare {
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: 10px;
+}
+body #mainDiv .kpiWrapper .kpiContent .theTextWrapper {
+  margin-top: 15px;
+}
+body #mainDiv .kpiWrapper .kpiContent .theTextWrapper .theText {
+  font-size: 43px;
+  line-height: 48px;
+  color: darkgray;
+  text-align: center;
+}
+body #mainDiv .kpiWrapper .kpiContent .theTextWrapper .theChapo {
+  font-size: 11px;
+  color: gray;
+  text-align: left;
+  /*.icon {
+					        background-image: url("/_layouts/images/Prexens/Hoozin/sprites/bl-hoozin-sprite.png?14010800");
+					        background-position: -56px -126px;
+					        display:inline-block;
+					        height: 25px;
+					        width: 25px;
+					        margin-right:10px;
+					        float:left;
+				        }*/
+}
+body #mainDiv .kpiWrapper .kpiContent .theTextWrapper .theChapo .text {
+  font-size: 15px;
+}
+body #mainDiv .kpiWrapper .kpiContent .theTextWrapper .theChapo .greenSquare {
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: 10px;
+  background-color: blue;
+}
+body #mainDiv .kpiWrapper .kpiContent .trendWrapper {
+  margin-top: 86px;
+}
+body #mainDiv .kpiWrapper .kpiContent .trendWrapper .trendTitle {
+  font-size: 15px;
+  color: darkgray;
+  text-align: right;
+}
+body #mainDiv .kpiWrapper .kpiContent .trendWrapper .trendDesc {
+  color: lightgray;
+  font-size: 11px;
+  text-align: right;
+}
+body #mainDiv .kpiWrapper .kpiFooter {
+  height: 38px;
+  border-top: 1px solid #E5E5E5;
+  padding: 0 12px;
+  line-height: 38px;
+  color: lightgray;
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  width: 100%;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
