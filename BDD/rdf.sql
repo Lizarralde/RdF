@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 13 Mai 2015 à 10:52
+-- Généré le :  Mer 13 Mai 2015 à 11:10
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -137,6 +137,7 @@ CREATE TABLE IF NOT EXISTS `participant` (
   `PART_MOTDEPASSE` varchar(30) DEFAULT NULL,
   `PART_CONFIRMATION` tinyint(1) DEFAULT NULL,
   `PART_AVATAR` blob,
+  `PART_DIPLOME` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`PART_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
