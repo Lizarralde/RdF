@@ -36,12 +36,11 @@ var highchartsUtils = function () {
                     var chartL = new Chart();
                     var chartP = new Chart();
 
-                    services.callService('http://127.0.0.1/RondeDesFacs-1/StoredProcedure/','POST',{ param1 : request, param2 : '',param3 : '' }, function(ret)
+                    services.callService('http://127.0.0.1:8080/RondeDesFacs-1/StoredProcedure/','POST',{ param1 : request, param2 : '',param3 : '' }, function(ret)
                     {
-                        var json = JSON.stringify(eval("(" + ret + ")"));
-                        var proName = json.procName;
-                        var cat = json.cartegories;
-                        var data = json.data;
+                        var proName = ret.procName;
+                        var cat = ret.cartegories;
+                        var data = ret.data;
                         chartL.createLineChart(proName+'Line', proName, data, cat);
 
                         var dataPie = {};
@@ -55,7 +54,7 @@ var highchartsUtils = function () {
                             dataPie[index] = total;
                         });
 
-                        chartP.createMonoSerieChar(proName+'Pie',data,'serie name');
+                        chartP.createMonoSerieChart(proName+'Pie',data,'serie name');
                     });
 
                     _charts[request+'Line'] = chartL;
@@ -178,16 +177,15 @@ this.SquareZone = function () {
 
 
     var _UpdateWithNextsCommunity = function (request, begin, stop) {
-        services.callService('http://127.0.0.1/RondeDesFacs-1/StoredProcedure/', 'POST', {
+        services.callService('http://127.0.0.1:8080/RondeDesFacs-1/StoredProcedure/', 'POST', {
             param1: request,
-            param1: begin,
+            param2: begin,
             param3: ''
         }, this.fillSquareKPI);
     }
 
     var _fillSquareKPI = function (ret) {
-        var json = JSON.stringify(eval("(" + ret + ")"));
-        var data = json.data;
+        var data = ret.data;
         var content = $('#square #kpiContent');
         var p0 = content.find('#p0');
 
