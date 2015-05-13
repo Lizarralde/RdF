@@ -33,7 +33,7 @@
         line-height: 38px;
         margin: 0 0 0 35px;
         padding: 0;
-        text-align: center;">Endroits Remarquables</h2>
+        text-align: center;">Titre</h2>
     <div id="container"></div>
     <header>
         <!--<<div class="list">
@@ -85,115 +85,114 @@
     </header>
 
 
-    <div id="kpiHomeWrapper">
-        <div class="kpiWrapper " id="kpiCopy" style="display:none">
-            <div class="kpiHeader">
-                <span class="kpiIcon"></span>
-                <h2>
-                    My title
-                </h2>
+<div id="kpiHomeWrapper">
+    <!--
+    <div class="kpiWrapper " id="kpiCopy" style="display:none">
+        <div class="kpiHeader">
+            <span class="kpiIcon"></span>
+            <h2>
+                My title
+            </h2>
 
-            </div>
-            <div id="container1" class="kpiContent highchartsWrapper"></div>
-            <div class="kpiFooter">
-                <span></span>
-            </div>
         </div>
+        <div id="container1" class="kpiContent highchartsWrapper"></div>
+        <div class="kpiFooter">
+            <span></span>
+        </div>
+    </div>
+    <!--
+            <div class="kpiWrapper square"r" data-request="topRunner" data-type="square" data-begin="1" data-max="1000" data-top="10">
 
-        <div class="kpiWrapper square" id="topRunner" data-request="topRunner" data-type="square" data-begin="1" data-max="1000" data-top="10">
-
-            <div class="kpiHeader">
-                <span class="kpiIcon"></span>
-                <h2>
-                    Top des coureurs.
-                </h2>
-            </div>
+                <div class="kpiHeader">
+                    <span class="kpiIcon"></span>
+                    <h2>
+                        Top des coureurs.
+                    </h2>
+                </div>
 
 
-            <div class="kpiContent">
+                <div class="kpiContent">
 
 
-                <div class="p0 column showMiniProfile"
-                     data-href="{$miniprofile-url}" style="display: none">
-                    <div class="userName">
-								<span>
+                    <div class="p0 column showMiniProfile"
+                         data-href="{$miniprofile-url}" style="display: none">
+                        <div class="userName">
+                                    <span>
 
-								</span>
-                    </div>
-                    <img class="userAvatar hoozinTooltip" data-tooltip-delay="0" title="" src="{$avatar-url}" alt="" />
-                    <div class="position">
-                        <!--$begin + $square-position -1-->
+                                    </span>
+                        </div>
+                        <img class="userAvatar hoozinTooltip" data-tooltip-delay="0" title="" src="{$avatar-url}" alt="" />
+                        <div class="position">
+                        </div>
                     </div>
                 </div>
+
+                <div class="kpiFooter">
+                    <span class="previous" data-request="topRunner"></span>
+                    <span class="next" data-request="topRunner"></span>
+                </div>
+
+            </div>
+
+            <div style="float: none;clear: left;"></div>
+
+            <div class="kpiWrapper linkedChart" id="antenneRepartitionPie" data-linked-chart="antenneRepartitionLine" data-seriename="Participants" data-type="pie" style="">
+                <div class="kpiHeader">
+                    <span class="kpiIcon"></span>
+                    <h2>
+                        Participants par antenne.
+                    </h2>
+
+                </div>
+                <div id="antenneRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+                <div class="kpiFooter">
+                    <span></span>
+                </div>
+            </div>
+            <div class="kpiWrapper medium" id="antenneRepartitionLine" data-request="antenneRepartition" data-type="line" style="">
+                <div class="kpiHeader">
+                    <span class="kpiIcon"></span>
+                    <h2>
+                        Temps des participants par antenne.
+                    </h2>
+
+                </div>
+                <div id="antenneRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+                <div class="kpiFooter">
+                    <span></span>
+                </div>
+            </div>
+    -->
                 <div style="float: none;clear: left;"></div>
-            </div>
 
-            <div class="kpiFooter">
-                <span class="previous" data-request="topRunner"></span>
-                <span class="next" data-request="topRunner"></span>
-            </div>
+                <div class="kpiWrapper large" id="degreeRepartitionLine" data-request="degreeRepartition" data-type="line"  style="">
+                    <div class="kpiHeader">
+                        <span class="kpiIcon"></span>
+                        <h2>
+                            Temps des participants par antenne.
+                        </h2>
 
-        </div>
+                    </div>
+                    <div id="degreeRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+                    <div class="kpiFooter">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="kpiWrapper " id="degreeRepartitionPie" data-request="degreeRepartition" data-seriename="Participants" data-type="pie" style="">
+                    <div class="kpiHeader">
+                        <span class="kpiIcon"></span>
+                        <h2>
+                            Participants par antenne
+                        </h2>
 
-        <div style="float: none;clear: left;"></div>
+                    </div>
+                    <div id="degreeRepartitionContainer" class="kpiContent highchartsWrapper"></div>
+                    <div class="kpiFooter">
+                        <span></span>
+                    </div>
+                </div>
 
-        <div class="kpiWrapper linkedChart" id="antenneRepartitionPie" data-linked-chart="antenneRepartitionLine" data-seriename="Participants" style="">
-            <div class="kpiHeader">
-                <span class="kpiIcon"></span>
-                <h2>
-                    Participants par antenne.
-                </h2>
-
-            </div>
-            <div id="antenneRepartitionContainer" class="kpiContent highchartsWrapper"></div>
-            <div class="kpiFooter">
-                <span></span>
-            </div>
-        </div>
-        <div class="kpiWrapper medium" id="antenneRepartitionLine" data-request="antenneRepartition" data-type="line" style="">
-            <div class="kpiHeader">
-                <span class="kpiIcon"></span>
-                <h2>
-                    Temps des participants par antenne.
-                </h2>
-
-            </div>
-            <div id="antenneRepartitionContainer" class="kpiContent highchartsWrapper"></div>
-            <div class="kpiFooter">
-                <span></span>
-            </div>
-        </div>
-
-        <div style="float: none;clear: left;"></div>
-
-        <div class="kpiWrapper linkedChart" id="degreeRepartitionPie" data-request="degreeRepartition" data-seriename="Participants" style="">
-            <div class="kpiHeader">
-                <span class="kpiIcon"></span>
-                <h2>
-                    Participants par année.
-                </h2>
-
-            </div>
-            <div id="degreeRepartitionContainer" class="kpiContent highchartsWrapper"></div>
-            <div class="kpiFooter">
-                <span></span>
-            </div>
-        </div>
-        <div class="kpiWrapper medium" id="degreeRepartitionLine" data-request="degreeRepartition" data-type="line" style="">
-            <div class="kpiHeader">
-                <span class="kpiIcon"></span>
-                <h2>
-                    Temps des participants par antenne.
-                </h2>
-
-            </div>
-            <div id="degreeRepartitionContainer" class="kpiContent highchartsWrapper"></div>
-            <div class="kpiFooter">
-                <span></span>
-            </div>
-        </div>
-
-        <div style="float: none;clear: left;"></div>
+                <div style="float: none;clear: left;"></div>
 
     </div>
 </body>
