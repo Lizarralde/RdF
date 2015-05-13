@@ -39,22 +39,22 @@ var highchartsUtils = function () {
                     services.callService('http://127.0.0.1:8080/RondeDesFacs-1/StoredProcedure/','POST',{ param1 : request, param2 : '',param3 : '' }, function(ret)
                     {
                         var proName = ret.procName;
-                        var cat = ret.cartegories;
+                        var cat = ret.categories;
                         var data = ret.data;
                         chartL.createLineChart(proName+'Line', proName, data, cat);
 
-                        var dataPie = {};
+                        var dataPie = [];
 
                         $.each(data, function(index){
                             var total = 0;
 
-                            $.each(this, function(){
+                            $.each(this.data, function(){
                                 total += this;
                             });
-                            dataPie[index] = total;
+                            dataPie[index] = [this.name, total];
                         });
 
-                        chartP.createMonoSerieChart(proName+'Pie',data,'serie name');
+                        chartP.createMonoSerieChart(proName+'Pie',proName,'serie name', dataPie);
                     });
 
                     _charts[request+'Line'] = chartL;
@@ -91,7 +91,7 @@ this.Chart = function () {
     this.createMonoSerieChart = function (containerId, request, serieName, data) {
         _id = containerId;
         _request = request;
-        $('.kpiWrapper[data-request="' + request + '"&&data-type="pie"]').highcharts({
+        $('.kpiWrapper[data-request="' + request + '"][data-type="pie"] .kpiContent').highcharts({
             chart: {
                 height: 230,
                 marginTop: 0,
@@ -125,7 +125,7 @@ this.Chart = function () {
     this.createLineChart = function (containerId, request, data, categories) {
         _id = containerId;
         _request = request;
-        $('.kpiWrapper[data-request="' + request + '"&&data-type="line"]').highcharts({
+        $('.kpiWrapper[data-request="' + request + '"][data-type="line"] .kpiContent').highcharts({
             chart: {
                 height: 200,
                 marginTop: 0,
@@ -181,15 +181,15 @@ this.SquareZone = function () {
             param1: request,
             param2: begin,
             param3: ''
-        }, this.fillSquareKPI);
+        }, _fillSquareKPI);
     }
 
     var _fillSquareKPI = function (ret) {
         var data = ret.data;
-        var content = $('#square #kpiContent');
-        var p0 = content.find('#p0');
+        var content = $('.square .kpiContent');
+        var p0 = content.find('.p0');
 
-        content.remove('#column:not(#p0)');
+        content.remove('.column:not(.p0)');
         var i = 1;
         _max = _begin;
         $.each(data, function (index) {
@@ -198,12 +198,11 @@ this.SquareZone = function () {
             pn.addClass("p" + i);
             i++;
 
-            pn.find('#userName span').text(this.name);
-            pn.find('#userAvatar').attr('title', this.name + ' (' + _begin + ')').attr('title', this.name + ' (' + _begin + ')').src("192.168.0.1/" + this.id + '.jpg');
-            pn.find('#position').text(this.y);
+            pn.find('.userName span').text(this.name);
+            pn.find('.userAvatar').attr('title', this.name + ' (' + _begin + ')').attr('title', this.name + ' (' + _begin + ')').attr('src', "192.168.0.1/" + this.id + '.jpg');
+            pn.find('.position').text(this.y);
 
             content.append(pn);
-            content.append('<div style="float: none;clear: left;"></div>');
 
             pn.toggle();
             _max++;
