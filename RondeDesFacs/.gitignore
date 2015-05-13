@@ -1,0 +1,10 @@
+# Bytecode
+build/
+target
+
+# Projet Eclipse
+.settings/
+
+.classpath
+.project
+
