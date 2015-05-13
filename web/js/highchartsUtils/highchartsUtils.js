@@ -36,7 +36,7 @@ var highchartsUtils = function () {
                     var chartL = new Chart();
                     var chartP = new Chart();
 
-                    services.callService('','POST',{param1:request, param2:'',param3:''},function(ret)
+                    services.callService('http://127.0.0.1/RondeDesFacs-1/StoredProcedure/','POST',{ param1 : request, param2 : '',param3 : '' }, function(ret)
                     {
                         var json = JSON.stringify(eval("(" + ret + ")"));
                         var proName = json.procName;
@@ -178,7 +178,7 @@ this.SquareZone = function () {
 
 
     var _UpdateWithNextsCommunity = function (request, begin, stop) {
-        services.callService('192.168.0.1/aaaaaaaaa', 'POST', {
+        services.callService('http://127.0.0.1/RondeDesFacs-1/StoredProcedure/', 'POST', {
             param1: request,
             param1: begin,
             param3: ''
