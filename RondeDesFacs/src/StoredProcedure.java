@@ -2,6 +2,8 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.FormParam;
@@ -125,7 +127,7 @@ public class StoredProcedure {
 					JSONObject j = new JSONObject();
 
 					j.put("id", rs.getString(ID_COLUMN_NAME));
-					j.put("y", rs.getLong(VALUE_COLUMN_NAME));
+					j.put("y", rs.getInt(RES_COLUMN_NAME));
 					j.put("name", rs.getString(FIRST_NAME_COLUMN_NAME) + " "
 							+ rs.getString(LAST_NAME_COLUMN_NAME));
 					j.put("picture", rs.getString(PICTURE_COLUMN_NAME));
@@ -145,13 +147,21 @@ public class StoredProcedure {
 				JSONObject j = null;
 				JSONArray data = null;
 
+				List<String> categoriesList = new ArrayList<String>();
+
+				String category = null;
 				String previousId = "";
 				String currentId = null;
 
 				// Parcours des données
 				while (rs.next()) {
 
-					categories.put(rs.getString(AXIS_COLUMN_NAME));
+					category = rs.getString(AXIS_COLUMN_NAME);
+
+					if (!categoriesList.contains(category)) {
+
+						categoriesList.add(category);
+					}
 
 					currentId = rs.getString(ID_COLUMN_NAME);
 
@@ -169,10 +179,10 @@ public class StoredProcedure {
 
 						j.put("name", currentId);
 
-						data.put(rs.getString(VALUE_COLUMN_NAME));
+						data.put(rs.getInt(RES_COLUMN_NAME));
 					} else {
 
-						data.put(rs.getString(VALUE_COLUMN_NAME));
+						data.put(rs.getInt(RES_COLUMN_NAME));
 
 						if (rs.isLast()) {
 
@@ -183,6 +193,11 @@ public class StoredProcedure {
 					}
 
 					previousId = currentId;
+				}
+
+				for (String s : categoriesList) {
+
+					categories.put(s);
 				}
 
 				jsonObject.put("categories", categories);
@@ -203,7 +218,7 @@ public class StoredProcedure {
 	// Nom des colonnes résultats
 	private final static String ID_COLUMN_NAME = "IDENT";
 	private final static String AXIS_COLUMN_NAME = "AXIS";
-	private final static String VALUE_COLUMN_NAME = "RES";
+	private final static String RES_COLUMN_NAME = "RES";
 	private final static String LAST_NAME_COLUMN_NAME = "LAST_NAME";
 	private final static String FIRST_NAME_COLUMN_NAME = "FIRST_NAME";
 	private final static String PICTURE_COLUMN_NAME = "PICTURE";
